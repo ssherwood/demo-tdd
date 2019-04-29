@@ -36,8 +36,8 @@ public class ShoppingCartServiceTests {
     public void shouldCreateEmptyCart() throws Exception {
         // Given
         Instant before = Instant.now();
-        ShoppingCart mockCart = new ShoppingCart();
-        mockCart.setId(11L);
+        ShoppingCart mockCart = ShoppingCart.builder().id(11L).build();
+
         given(shoppingCartRepo.save(any()))
                 .willReturn(mockCart);
 

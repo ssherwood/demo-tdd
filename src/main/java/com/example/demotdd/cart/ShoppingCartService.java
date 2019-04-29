@@ -14,6 +14,6 @@ public class ShoppingCartService {
     }
 
     public ShoppingCart createCart() {
-        return shoppingCartRepo.save(new ShoppingCart());
+        return shoppingCartRepo.save(ShoppingCart.builder().build());
     }
 }
